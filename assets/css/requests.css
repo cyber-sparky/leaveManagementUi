@@ -1,0 +1,28 @@
+body{
+    background-color: whitesmoke;
+    height: 100vh;
+}
+.pendingReq{
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 5%;
+    border:2px gray;
+}
+.pendingReq > p{
+    padding-top: 1%;
+}
+.title{
+    margin-left: 5%;
+}
+.pendingReq > button{
+width: 35%;
+}
+.requestContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /* border: 2px solid black; */
+    justify-content: space-around;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "leavemanagementwebapp",
+  "version": "1.0.0",
+  "description": "a project for leave management",
+  "main": "index.js",
+  "scripts": {
+    "dev"  : "http-server ./" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyber-sparky/leaveManagementWeb.git"
+  },
+  "author": "cyber-sparky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyber-sparky/leaveManagementWeb/issues"
+  },
+  "homepage": "https://github.com/cyber-sparky/leaveManagementWeb#readme",
+  "keywords": [],
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

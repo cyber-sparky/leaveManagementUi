@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* background-color: whitesmoke; */
+  font-family: "Roboto", sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1%;
+}
+aside {
+  height: 100vh;
+  position: absolute;
+  width: 10%;
+  background-color: white;
+}
+aside > ul > button {
+  margin-top: 25%;
+  padding-left: 10%;
+  font-size: larger;
+  background-color: transparent;
+  border: none;
+  flex-direction: row;
+  display: flex;
+}
+.signout {
+  font-size: larger;
+  background-color: transparent;
+  border: none;
+}
+main {
+  position: relative;
+  margin-left: 10%;
+  padding-top: 1%;
+  background-color: whitesmoke;
+  /* background-color: aqua; */
+}
