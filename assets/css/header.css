@@ -4,29 +4,36 @@
   box-sizing: border-box;
 }
 body {
-  /* background-color: whitesmoke; */
+  /* background-color: #00ADB5; */
   font-family: "Roboto", sans-serif;
 }
 header {
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: #CBF1F5;
   padding: 1%;
 }
 aside {
-  height: 100vh;
+  min-height: 100vh;
   position: absolute;
-  width: 10%;
-  background-color: white;
+  width: 15%;
+  background-color: #DBE2EF;
+  padding-bottom:900px;
+  /* border: 2px solid black; */
+
 }
 aside > ul > button {
   margin-top: 25%;
-  padding-left: 10%;
+  padding-left: 20%;
   font-size: larger;
   background-color: transparent;
   border: none;
   flex-direction: row;
   display: flex;
+  text-align: center;
+  /* padding-left: 5%; */
+  /* border: 2px solid black; */
+  
 }
 .signout {
   font-size: larger;
@@ -34,9 +41,7 @@ aside > ul > button {
   border: none;
 }
 main {
-  position: relative;
-  margin-left: 10%;
+  margin-left: 15%;
   padding-top: 1%;
-  background-color: whitesmoke;
-  /* background-color: aqua; */
+  background-color: #F9F7F7;
 }

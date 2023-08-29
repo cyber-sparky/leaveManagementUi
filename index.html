@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./assets/css/header.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+  
 </head>
 
 <body>
@@ -26,14 +27,21 @@
     <aside>
         <ul>
             <button type="button" class="btn btn-light"><a href="#">Dashboard</a></button>
-            <button type="button" class="btn btn-light"><a href="./assets/pages/apply.html" target="_blank"
-                    rel="noopener noreferrer">Apply</a></button>
+            <button type="button" class="btn btn-light"><a href="./assets/pages/apply.html">Apply</a></button>
             <button type="button" class="btn btn-light">Holidays</button>
             <button type="button" class="btn btn-light">Policies</button>
             <button type="button" class="btn btn-light">Requests</button>
         </ul>
     </aside>
     <main>
+        <div class="leaveInsights">
+            <h1>Leave Insights</h1>
+            <button>Apply</button>
+        </div>
+        <div class="barsTitles">
+            <h1>Leave Statistics</h1>
+            <h1>Batches</h1>
+        </div>
         <div class="bars">
             <canvas id="myChart" style="display: block; width: 55px; height: 55px;"></canvas>
             <canvas id="doughnutChart" style="display: block; width: 55px; height: 55px;"></canvas>
@@ -48,6 +56,20 @@
                     <th>Leave Duration</th>
                     <th>Status</th>
                     <th></th>
+                </tr>
+                <tr>
+                    <td>Casual Leave</td>
+                    <td>2022/06/02</td>
+                    <td>2022/06/06</td>
+                    <td>Pending</td>
+                    <td>view all</td>
+                </tr>
+                <tr>
+                    <td>Casual Leave</td>
+                    <td>2022/06/02</td>
+                    <td>2022/06/06</td>
+                    <td>Pending</td>
+                    <td>view all</td>
                 </tr>
                 <tr>
                     <td>Casual Leave</td>
@@ -85,7 +107,7 @@
         new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
                 datasets: [{
                     label: '# of Votes',
                     data: [12, 19, 3, 5, 2, 3],
@@ -117,15 +139,15 @@
         });
         new Chart(doughnutChart, {
             type: 'doughnut',
-            data: data = {
+            data: {
                 labels: [
-                    'Red',
-                    'Blue',
-                    'Yellow'
+                    'Casual',
+                    'Sick',
+                    'Earned'
                 ],
                 datasets: [{
                     label: 'My First Dataset',
-                    data: [300, 50, 100],
+                    data: [10, 5, 10],
                     backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(54, 162, 235)',

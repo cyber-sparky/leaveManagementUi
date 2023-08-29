@@ -1,0 +1,15 @@
+body {
+    background-color: #f9f7f7;
+    overflow-x: hidden;
+  }
+  td,th{
+    border: 2px solid black;
+    padding: 17px;
+    font-size: large;
+    border-bottom: 2px solid black;
+  }
+  table,.titleList{
+    border-collapse: collapse;
+    margin-left: 5%;
+    margin-top: 2%;
+  }

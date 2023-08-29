@@ -1,27 +1,63 @@
-
-body{
-    background-color: whitesmoke;
+body {
+  background-color: #f9f7f7;
+  overflow-x: hidden;
 }
 .bars {
-  display: flex;
-  width: 100%;
-  height: 40vh;
-  justify-content: space-between;
+  width: 110%;
+  height: 50vh;
+  display: grid;
+  grid-template-areas: 'boxchart doughnutChart';
 }
 .bars > canvas {
   margin-right: 10%;
   margin-left: 10%;
+  /* background-color: white; */
+  /* width: 210px; */
+}
+#myChart{
+  grid-area: boxchart;
+}
+#doughnutChart{
+  grid-area: doughnutChart;
+}
+table {
+  margin-top: 2%;
+  width: 150%;
 }
 th,
 td {
-  border-bottom: 1px solid black;
-  padding: 20px;
-    font-size: large;
+  padding: 17px;
+  font-size: large;
+  border-bottom: 2px solid black;
+  margin: 0px;
 }
-.pendingReqTitle{
-    margin-top: 5%;
-    margin-left: 1%;
+.pendingReqTitle {
+  margin-top: 5%;
+  margin-left: 1%;
+  color: #424874;
 }
-.pendingReq{
+.pendingReq {
+  margin-left: 10%;
+
+  width: 50%;
+}
+.barsTitles {
+  display: flex;
+  justify-content: space-around;
+  color: #424874;
+}
+.leaveInsights {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin-bottom: 1%;
+  padding: 1%;
+}
+.leaveInsights > h1 {
   margin-left: 5%;
+}
+.leaveInsights > button {
+  margin-right: 5%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
