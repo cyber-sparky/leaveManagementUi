@@ -30,14 +30,36 @@
         </ul>
     </aside>
     <main>
-        <h1 class="titleList">Employee List</h1>
-        <table>
+        <div class="addEmployeeDiv">
+            <h1 class="titleList">Employee List</h1>
+            <button class="add-button" id="addEmployeeButton">Add Employee</button>
+        </div>
+        <div id="addPopupContainer">
+            <div id="popup">
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" required>
+                    <button class="submit-button">Add</button>
+                </form>
+                <button class="cancel-button" id="closePopup">Cancel</button>
+            </div>
+        </div>
+
+
+        <table class="styled-table">
             <thead>
                 <tr>
                     <th>S.No</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Manager</th>
                     <th>Date of Joining</th>
+                    <th>Active</th>
+                    <th>Date of Relieving</th>
                     <th></th>
                 </tr>
             </thead>
@@ -46,29 +68,86 @@
                     <td>1</td>
                     <td>pranaw</td>
                     <td>pranaw@gmail.com</td>
+                    <td>murugesan@gmail.com</td>
                     <td>01/05/2005 </td>
-                    <td>edit</td>
+                    <td>Working</td>
+                    <td></td>
+                    <td><button class="edit-button">Edit</button></td>
                 </tr>
                 <tr>
                     <td>1</td>
                     <td>pranaw</td>
                     <td>pranaw@gmail.com</td>
+                    <td>murugesan@gmail.com</td>
                     <td>01/05/2005 </td>
-                    <td>edit</td>
+                    <td>Working</td>
+                    <td></td>
+                    <td><button class="edit-button">Edit</button></td>
                 </tr>
                 <tr>
                     <td>1</td>
                     <td>pranaw</td>
                     <td>pranaw@gmail.com</td>
+                    <td>murugesan@gmail.com</td>
                     <td>01/05/2005 </td>
-                    <td>edit</td>
+                    <td>Working</td>
+                    <td></td>
+                    <td><button class="edit-button">Edit</button></td>
                 </tr>
             </tbody>
         </table>
+
+
+        <div id="popupContainer">
+            <div id="popup">
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" value="pranaw">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" value="pranaw@gmail.com">
+                    <label for="manager">Manager:</label>
+                    <input type="text" name="manager" id="manager" value="murugesan@gmail.com">
+                    <button type="button" id="closeForm">Close</button>
+                </form>
+            </div>
+        </div>
+        <style>
+
+        </style>
     </main>
     <footer>
     </footer>
+    <script>
+        const openFormButtons = document.querySelectorAll(".edit-button");
+        const closeFormButton = document.getElementById("closeForm");
+        const popupContainer = document.getElementById("popupContainer");
+        const addPopupContainer = document.getElementById("addPopupContainer");
+        const addEmployeeButton = document.getElementById("addEmployeeButton");
+        const cancelButtons = document.querySelectorAll(".cancel-button"); // Use querySelectorAll
 
+        addEmployeeButton.addEventListener("click", function () {
+            addPopupContainer.style.display = "flex";
+        });
+
+        openFormButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                popupContainer.style.display = "flex";
+            });
+        });
+
+        cancelButtons.forEach(button => { // Iterate through each cancelButton
+            button.addEventListener("click", () => {
+                addPopupContainer.style.display = "none";
+            });
+        });
+
+        closeFormButton.addEventListener("click", () => {
+            popupContainer.style.display = "none";
+        });
+
+
+
+    </script>
 </body>
 
 </html>
